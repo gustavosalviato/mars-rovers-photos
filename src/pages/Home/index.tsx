@@ -1,14 +1,21 @@
 import { ButtonSubmit } from "../../components/ButtonSubmit"
 import { Input } from "../../components/Input"
-import { FormInputContainer, HomeContainer } from "./styles"
+import { FormInputContainer, HomeContainer, Teste } from "./styles"
 
 export const Home = () => {
     return (
         <>
-            <FormInputContainer>
-                <Input />
-                <ButtonSubmit />
-            </FormInputContainer>
+            <Teste>
+                <FormInputContainer>
+                    <Input />
+                    <ButtonSubmit />
+                </FormInputContainer>
+                <div>
+                    <div>..</div>
+                    <div>..</div>
+                    <div>..</div>
+                </div>
+            </Teste>
             <HomeContainer>
             </HomeContainer>
         </>
