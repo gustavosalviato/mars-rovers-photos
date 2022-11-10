@@ -1,7 +1,15 @@
-import { HomeContainer } from "./styles"
+import { Input } from "../../components/Input"
+import { FormInputContainer, HomeContainer } from "./styles"
 
 export const Home = () => {
     return (
-        <div></div>
+        <>
+            <FormInputContainer>
+                <Input />
+                <button></button>
+            </FormInputContainer>
+            <HomeContainer>
+            </HomeContainer>
+        </>
     )
 }
