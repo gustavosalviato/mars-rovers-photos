@@ -1,3 +1,4 @@
+import { ButtonSubmit } from "../../components/ButtonSubmit"
 import { Input } from "../../components/Input"
 import { FormInputContainer, HomeContainer } from "./styles"
 
@@ -6,7 +7,7 @@ export const Home = () => {
         <>
             <FormInputContainer>
                 <Input />
-                <button></button>
+                <ButtonSubmit />
             </FormInputContainer>
             <HomeContainer>
             </HomeContainer>

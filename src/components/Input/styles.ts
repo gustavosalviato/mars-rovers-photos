@@ -2,6 +2,7 @@ import { styled } from "../../styles";
 
 export const InputWrapper = styled('div', {
     display: 'flex',
+    flex: '1',
     flexDirection: 'column',
     position: 'relative',
     gap: '0.4rem'

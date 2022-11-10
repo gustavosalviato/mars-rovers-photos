@@ -22,6 +22,7 @@ export const { config,
 
 
         yellow: '#DBAC2C',
+        yellow100: '#E2C932',
       }
     }
   })

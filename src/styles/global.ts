@@ -23,7 +23,13 @@ export const globaStyles = globalCss({
     cursor: 'pointer',
   },
 
-  'html':{
+  'html': {
     fontSize: '62.5%'
   },
+
+
+  ':focus': {
+    outline: 0,
+    boxShadow: '0 0 0 2px %yellow100',
+  }
 })

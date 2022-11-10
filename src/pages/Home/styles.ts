@@ -14,6 +14,8 @@ export const HomeContainer = styled('main', {
 
 
 export const FormInputContainer = styled('main', {
+    display: 'flex',
+    gap: '0.8rem',
     width: '100%',
     maxWidth: '1200px',
     margin: '3.2rem auto 0',
