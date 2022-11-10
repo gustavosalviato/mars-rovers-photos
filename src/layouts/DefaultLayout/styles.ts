@@ -2,8 +2,9 @@ import { styled } from "../../styles";
 
 export const DefaultContainer = styled('div', {
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'flex-start',
-    justifyContent: 'center',
-    margin: '0 auto',
     minHeight: '100vh',
+    justifyContent: 'center',
+    width: '100%'
 })
