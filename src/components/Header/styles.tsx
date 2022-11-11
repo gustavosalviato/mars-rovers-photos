@@ -1,18 +1,22 @@
 import { styled } from "@stitches/react";
 
 export const HeaderContainer = styled('header', {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1.2rem',
+
     width: '100%',
     maxWidth: '1180px',
     padding: '3.2rem 1.6rem ',
     margin: '0 auto',
-    backgroundColor: '$gray900',
     borderRadius: '6px',
 
-    display: 'flex',
-    justifyContent: 'space-between',
+    strong: {
+        fontSize: '3.2rem',
 
-    strong:{
-        fontSize: '2.4rem',
-        color: '$gray100',
+    },
+
+    svg: {
+        color: '$yellow',
     }
 })

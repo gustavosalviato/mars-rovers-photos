@@ -2,8 +2,17 @@ import { ButtonSubmit } from "../../components/ButtonSubmit"
 import { Input } from "../../components/Input"
 import { FormInputContainer, HomeContainer, FormContainer, RadioContainer, RadioItem } from "./styles"
 import { Planet, FlyingSaucer, Rocket } from 'phosphor-react'
+import { PhotoCard } from "../../components/PhotoCard"
+import { useKeenSlider } from 'keen-slider/react'
+
 
 export const Home = () => {
+    const [sliderRef] = useKeenSlider({
+        slides: {
+            perView: 3,
+            spacing: 48,
+        }
+    })
     return (
         <>
             <FormContainer>
@@ -51,8 +60,13 @@ export const Home = () => {
                     <ButtonSubmit />
                 </FormInputContainer>
             </FormContainer>
-            <HomeContainer>
-                
+
+
+            <HomeContainer ref={sliderRef} className="keen_slider">
+                <PhotoCard className="keen-slider__slide" />
+                <PhotoCard className="keen-slider__slide" />
+                <PhotoCard className="keen-slider__slide" />
+                <PhotoCard className="keen-slider__slide" />
             </HomeContainer>
         </>
     )

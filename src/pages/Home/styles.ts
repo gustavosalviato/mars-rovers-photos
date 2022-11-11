@@ -6,9 +6,10 @@ export const HomeContainer = styled('main', {
     width: '100%',
     maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
     marginLeft: 'auto',
-    minHeight: '65.6rem',
+    minHeight: '63.2rem',
     padding: '0.4rem',
-    background: 'red',
+
+    overflowX: 'hidden',
 })
 
 export const FormContainer = styled('form', {
@@ -26,7 +27,7 @@ export const FormContainer = styled('form', {
 export const FormInputContainer = styled('main', {
     width: '100%',
     display: 'flex',
-    gap: '0.4rem',
+    gap: '0.8rem',
     maxWidth: '1200px',
     margin: '3.2rem auto 0',
 })

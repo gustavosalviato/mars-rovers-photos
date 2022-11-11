@@ -20,6 +20,9 @@ export const { config,
         green500: '#00875f',
         green300: '#00b37e',
 
+        baseCard: '#7B96B2',
+        baseHover: '#3A536B',
+
 
         yellow: '#DBAC2C',
         yellow100: '#E2C932',
