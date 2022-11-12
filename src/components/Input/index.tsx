@@ -1,10 +1,13 @@
-import { InputStyledContainer, InputWrapper, InputStyled  } from "./styles"
-
+import { InputStyledContainer, InputWrapper, InputStyled } from "./styles"
+import { useFormContext } from 'react-hook-form'
 export const Input = () => {
+
+    const { register } = useFormContext()
+
     return (
         <InputWrapper>
             <InputStyledContainer>
-                <InputStyled placeholder="Informe um data"/>
+                <InputStyled placeholder="Informe um data" {...register('query')} />
             </InputStyledContainer>
         </InputWrapper>
     )

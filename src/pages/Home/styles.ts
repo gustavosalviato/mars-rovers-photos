@@ -1,4 +1,6 @@
 import { styled } from "../../styles";
+import * as RadioGroup from '@radix-ui/react-radio-group';
+
 
 export const HomeContainer = styled('main', {
     marginTop: '1.2rem',
@@ -33,7 +35,7 @@ export const FormInputContainer = styled('main', {
 })
 
 
-export const RadioContainer = styled('div', {
+export const RadioContainer = styled(RadioGroup.Root, {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -42,6 +44,29 @@ export const RadioContainer = styled('div', {
 })
 
 export const RadioItem = styled('div', {
+
+    variants: {
+        iconColor: {
+            gray: {
+                svg: {
+                    color: '$gray100',
+                }
+            },
+
+            yellow: {
+                svg: {
+                    color: '$yellow',
+                }
+            },
+
+            red: {
+                svg: {
+                    color: '$redDark',
+                }
+            }
+        }
+    },
+
     display: 'flex',
     flexDirection: 'column',
     gap: '1.2rem',
@@ -49,6 +74,7 @@ export const RadioItem = styled('div', {
     backgroundColor: '$gray400',
     borderRadius: '6px',
     width: '30rem',
+    cursor: 'pointer',
 
     header: {
         display: 'flex',
@@ -66,4 +92,18 @@ export const RadioItem = styled('div', {
     span: {
         color: '$gray300',
     },
+
+    '&[data-state="checked"]': {
+        backgroundColor: '$yellowLight',
+        border: '2px solid $yellowDark',
+        color: '$yellow',
+
+        span:{
+            color: 'inherit',
+        },
+
+        svg:{
+            color: 'inherit',
+        }
+    }
 })

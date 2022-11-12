@@ -26,6 +26,10 @@ export const { config,
 
         yellow: '#DBAC2C',
         yellow100: '#E2C932',
+        yellowLight: '#F1E9C9',
+        yellowDark: '#C47F17',
+
+        redDark: '#AA2834',
       }
     }
   })
