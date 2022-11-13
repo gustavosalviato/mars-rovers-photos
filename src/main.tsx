@@ -4,5 +4,5 @@ import { globaStyles } from './styles/global'
 
 globaStyles()
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <App />
+  <App />,
 )

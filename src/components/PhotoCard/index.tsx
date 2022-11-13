@@ -1,18 +1,63 @@
-import { PhotoCardContainer, } from "./styles"
+import { RoverPhoto } from '../../pages/Home'
+import {
+  BodyContainer,
+  Footer,
+  PhotoCardContainer,
+  PhotoCardContent,
+  Status,
+} from './styles'
+import { format, formatDistanceToNow } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
 
 interface PhotoCardProps {
-    className: string;
+  rover: RoverPhoto
+  className: string
 }
 
-export const PhotoCard = ({ className }: PhotoCardProps) => {
-    return (
-        <PhotoCardContainer className={className}>
-            <img src="https://images.unsplash.com/photo-1630694093867-4b947d812bf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1615&q=80" width={520} height={500} alt="" />
+export const PhotoCard = ({ rover, className }: PhotoCardProps) => {
+  return (
+    <PhotoCardContainer className={className}>
+      <img src={rover.image} width={520} height={400} alt="" />
 
-            <footer>
-                <strong>Teste</strong>
-                <span>Teste</span>
-            </footer>
-        </PhotoCardContainer>
-    )
+      <PhotoCardContent>
+        <header>
+          <strong>{`Tirada por ${rover.cameraName}`}</strong>
+
+          <p>
+            {formatDistanceToNow(new Date(rover.data), {
+              locale: ptBR,
+              addSuffix: true,
+            })}
+          </p>
+        </header>
+
+        <BodyContainer>
+          <strong>{rover.roverName}</strong>
+          <Status statusColor={`${rover.roverStatus}`}>
+            {rover.roverStatus}
+          </Status>
+        </BodyContainer>
+
+        <Footer>
+          <div>
+            <span>Data de lançamento</span>
+            <p>
+              {format(new Date(rover.launchDate), `dd 'de' MMMM, 'de' yyyy`, {
+                locale: ptBR,
+              })}
+            </p>
+          </div>
+
+          <div>
+            <span>Data de pouso</span>
+            <p>
+              {format(new Date(rover.landingDate), `dd 'de' MMMM, 'de' yyyy`, {
+                locale: ptBR,
+              })}
+            </p>
+          </div>
+        </Footer>
+      </PhotoCardContent>
+    </PhotoCardContainer>
+  )
 }

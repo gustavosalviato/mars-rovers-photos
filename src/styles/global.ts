@@ -1,4 +1,4 @@
-import { globalCss } from ".";
+import { globalCss } from '.'
 
 export const globaStyles = globalCss({
   '*': {
@@ -19,17 +19,16 @@ export const globaStyles = globalCss({
     fontWeight: 400,
   },
 
-  'button': {
+  button: {
     cursor: 'pointer',
   },
 
-  'html': {
-    fontSize: '62.5%'
+  html: {
+    fontSize: '62.5%',
   },
-
 
   ':focus': {
     outline: 0,
     boxShadow: '0 0 0 2px %yellow100',
-  }
+  },
 })
