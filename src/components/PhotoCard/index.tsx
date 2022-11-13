@@ -33,7 +33,9 @@ export const PhotoCard = ({ rover, className }: PhotoCardProps) => {
 
         <BodyContainer>
           <strong>{rover.roverName}</strong>
-          <Status statusColor={`${rover.roverStatus}`}>
+          <Status
+            statusColor={rover.roverStatus === 'active' ? 'active' : 'complete'}
+          >
             {rover.roverStatus}
           </Status>
         </BodyContainer>
