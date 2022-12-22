@@ -1,11 +1,11 @@
 <h1 align="center">
-    <a href="">🔗Mars Rover Photos</a>
+    <a href="">🔗Mars Rovers Photos</a>
 </h1>
 
 <p align="center">🚀 Mars Rover Photos</p>
 
 
-Informe uma data e veja fotos tiradas do espaço pelos Mars Rover!
+Informe uma data e veja fotos tiradas do espaço pelos Mars Rovers!
 
 Esse projeto foi desenvolvido com o intuito de praticar os conceitos de React (fundamentos, context API, data fetching, etc..)
 Consumindo um API disponibilizada pela NASA. Sim! a NASA disponibiliza de várias API na internet pra criar projetos e ir além dos estudos, você poder dar uma olhada nesses serviços nesse link => https://api.nasa.gov/
